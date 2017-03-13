@@ -131,7 +131,7 @@ class Unoconv extends Container implements DocxConverter
 			// NOTE: For some really odd reason the first time the command runs
 			// it does not complete successfully. The second time around it
 			// works fine. It has something to do with the homedir setup...
-            if ((mb_strpos($error, 'Error: Unable to connect') !== false))
+            if (mb_strpos($error, 'Error: Unable to connect') !== false)
 //			if ((new Str\Str())->contains($error, 'Error: Unable to connect'))
 			{
 				$process->run();
