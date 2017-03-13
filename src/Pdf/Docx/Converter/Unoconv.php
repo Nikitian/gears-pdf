@@ -138,7 +138,7 @@ class Unoconv extends Container implements DocxConverter
 
 				if (!$process->isSuccessful())
 				{
-					$error = $process->getErrorOutput();
+					$error = $cmd . "\n\n" . $process->getErrorOutput();
 				}
 				else
 				{
