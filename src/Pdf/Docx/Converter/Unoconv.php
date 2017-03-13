@@ -138,7 +138,7 @@ class Unoconv extends Container implements DocxConverter
 
 				if (!$process->isSuccessful())
 				{
-					$error = $cmd . "\n\n" . $process->getErrorOutput();
+					$error = $process->getErrorOutput();
 				}
 				else
 				{
@@ -146,7 +146,7 @@ class Unoconv extends Container implements DocxConverter
 				}
 			}
 
-			if (!is_null($error)) throw new RuntimeException($error);
+			if (!is_null($error)) throw new RuntimeException($cmd . "\n\n" . $error);
 		}
 
 		// Clean up after ourselves
