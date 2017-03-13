@@ -4,6 +4,8 @@
 	"homepage": "https://github.com/phpgearbox/pdf",
 	"keywords": ["pdf", "docx", "template", "builder", "converter"],
 	"license": "MIT",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"autoload":
 	{
 		"psr-4":
